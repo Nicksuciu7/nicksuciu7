@@ -2,7 +2,7 @@
 
 Computer Science graduate from the **University of Sussex**, interested in data analysis, machine learning and software development.
 
-I enjoy turning messy data into understandable results, building reproducible Python workflows and explaining what the evidence can—and cannot—tell us.
+I enjoy turning messy data into understandable results, building reproducible Python workflows and explaining what the evidence can and cannot tell us.
 
 ## Featured project
 
