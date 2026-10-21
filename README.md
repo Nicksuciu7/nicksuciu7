@@ -4,7 +4,22 @@ Computer Science graduate from the **University of Sussex**, interested in data 
 
 I enjoy turning messy data into understandable results, building reproducible Python workflows and explaining what the evidence can and cannot tell us.
 
-## Featured project
+## Featured projects
+
+### MusicMail
+
+A web application for independent musicians, with industry discovery, a private
+contact network, event planning and optional Gmail sending.
+
+- **Application engineering:** Next.js, React and TypeScript backed by PostgreSQL and Supabase.
+- **Upgrade safety:** repeatable rehearsals check existing accounts, CRM records and established workflows.
+- **Privacy and testing:** workspace isolation, browser regression tests and real isolated authentication services.
+
+**Next.js · TypeScript · PostgreSQL · Supabase · Vitest · Playwright**
+
+[Read the engineering case study](musicmail.md) · [Open MusicMail](https://app.musicmailapp.uk)
+
+Source code remains proprietary; the case study is deliberately sanitised.
 
 ### [Measuring and Predicting Right-Wing Populism in Britain](https://github.com/nicksuciu7/right-wing-populism-britain)
 
