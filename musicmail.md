@@ -26,7 +26,26 @@ The trade-off was to extend established structures and retain compatibility,
 rather than introduce a parallel implementation. Reproducible fixtures make
 upgrade safety reviewable without copying customer data.
 
-This milestone is a private engineering release; it does not claim a production
+## Engineering milestone — Phase 2: event and evidence records
+
+The next challenge was to represent event history and supporting evidence while
+keeping private workspace findings separate from shared application data.
+
+I added structured records for events and evidence-backed facts, correction and
+retraction history, and compatible maintenance of existing references. Database
+authorization and server-validated ownership protect private findings. Account
+exports and deletion were extended alongside the new records.
+
+Tests exercise repeated events, conflicting facts, identity merges and reciprocal
+workspace isolation. The same checks run against both PostgreSQL and disposable
+Supabase services with real authenticated browser sessions. Existing account,
+CRM, calendar and appearance journeys remain covered by regression tests.
+
+The engineering trade-off was to preserve existing identifiers and interfaces
+while introducing the new records incrementally. Synthetic fixtures make the
+maintenance and privacy checks repeatable without exposing customer data.
+
+These milestones are private engineering releases; they do not claim a production
 rollout of the new version. The application source remains proprietary. This
 standalone case study contains no production code, schema, internal algorithms,
 credentials, customer data or internal operational documents.
