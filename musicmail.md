@@ -45,6 +45,32 @@ The engineering trade-off was to preserve existing identifiers and interfaces
 while introducing the new records incrementally. Synthetic fixtures make the
 maintenance and privacy checks repeatable without exposing customer data.
 
+## Engineering milestone — Phase 3: public discovery
+
+The challenge was to add anonymous browsing to an application with established
+private account workflows. An explicit review step selects the profile
+information suitable for public discovery; contacts, notes and calendar records
+retain their private access controls.
+
+I built responsive search and filtering, a map/list experience, stable profile
+URLs and search-engine metadata. Users can deliberately save a published profile
+or copy an event into their private workspace. Existing account and CRM journeys
+remain covered by regression tests.
+
+Validation combines database permission tests, anonymous and authenticated API
+checks, real isolated sessions, browser workflows, accessibility checks and
+synthetic load fixtures. Tests cover public-field selection, filter correctness,
+withdrawals and the separation between public results and private records.
+
+The engineering trade-off was to extend the existing application and map
+components while making publication a deliberate action. This milestone is a
+private engineering release; production activation is a separate decision.
+
+![MusicMail public discovery development preview with fictional data](assets/musicmail-public-discovery.png)
+
+*Local development preview. All displayed profiles and events are fictional;
+this screenshot does not represent a live public catalogue.*
+
 These milestones are private engineering releases; they do not claim a production
 rollout of the new version. The application source remains proprietary. This
 standalone case study contains no production code, schema, internal algorithms,
