@@ -63,17 +63,36 @@ synthetic load fixtures. Tests cover public-field selection, filter correctness,
 withdrawals and the separation between public results and private records.
 
 The engineering trade-off was to extend the existing application and map
-components while making publication a deliberate action. This milestone is a
-private engineering release; production activation is a separate decision.
+components while making publication a deliberate action. Public discovery is
+now deployed with an empty catalogue; profile publication remains deliberate.
 
 ![MusicMail public discovery development preview with fictional data](assets/musicmail-public-discovery.png)
 
 *Local development preview. All displayed profiles and events are fictional;
 this screenshot does not represent a live public catalogue.*
 
-These milestones are private engineering releases; they do not claim a production
-rollout of the new version. The application source remains proprietary. This
-standalone case study contains no production code, schema, internal algorithms,
-credentials, customer data or internal operational documents.
+## Engineering milestone — Phase 4: community profiles
+
+The challenge was to let people represent public industry profiles without
+giving them access to another person's private workspace.
+
+I added profile creation and management, control-verification workflows with
+manual review, contributions, disputes and revocable access. Self-reported
+profile information is distinguished from independently checked control.
+Users can represent several profiles while continuing to use the existing CRM.
+
+Validation combines database permission tests, real isolated authenticated
+sessions, browser workflows and responsive accessibility checks. Tests cover
+unauthorised claims and edits, revoked access, private-data boundaries,
+account exports and deletion. Existing account, calendar and CRM journeys
+remain covered by regression tests.
+
+The engineering trade-off was to give profile management its own narrowly
+scoped authority while reusing the application's contribution and review
+tools. Phase 4 is a private engineering release and is not yet deployed.
+
+The application source remains proprietary. This standalone case study contains
+no production code, schema, internal algorithms, credentials, customer data or
+internal operational documents.
 
 [MusicMail](https://app.musicmailapp.uk)
