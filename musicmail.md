@@ -91,6 +91,26 @@ The engineering trade-off was to give profile management its own narrowly
 scoped authority while reusing the application's contribution and review
 tools. Phase 4 is a private engineering release and is not yet deployed.
 
+## Engineering milestone — Phase 5: background job reliability
+
+The challenge was to add recoverable background work while preserving the
+application's private account boundaries and existing workflows.
+
+I added bounded job processing, user-visible progress and pause/resume/cancel
+controls, a simulated service adapter, and compatible private exports and
+account deletion. Repeated requests and interrupted work are handled without
+duplicating simulated credit charges.
+
+Validation uses synthetic data, competing database connections, crash and retry
+scenarios, real isolated authentication, browser workflows and accessibility
+checks. Existing account, CRM, calendar and public-directory journeys remain
+covered by regression tests.
+
+The engineering trade-off was to test failure recovery and transactional
+correctness with a simulated provider before integrating paid external services.
+Phase 5 is a private engineering release and is not yet deployed. It does not
+claim live AI research or production-scale reliability.
+
 The application source remains proprietary. This standalone case study contains
 no production code, schema, internal algorithms, credentials, customer data or
 internal operational documents.
