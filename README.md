@@ -16,6 +16,7 @@ contact network, event planning and optional Gmail sending.
 - **Data modelling:** event and evidence records, correction history and compatible maintenance.
 - **Public discovery (development):** responsive anonymous browsing, stable profiles, maps and SEO with deliberate publication review.
 - **Community profiles (development):** represented-profile management, control verification with manual review, contributions, disputes and revocable access.
+- **Background jobs (development):** recoverable processing, progress and stop controls, with simulated-service crash/retry/concurrency tests.
 - **Privacy and testing:** workspace isolation, browser regression tests and real isolated authentication services.
 
 **Next.js · TypeScript · PostgreSQL · Supabase · Vitest · Playwright**
